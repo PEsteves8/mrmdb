@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>mrMDB - Meta Rotten Movie Data Base - Get metacritic, rottentomatoes and imdb scores in one place</title>
+
+    <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="dist/styles.css">
+
+</head>
+
+<body>
+
+    <body>
+
+        <div class="container" ng-app="app">
+
+            <div class="row" ng-controller="moviesController as movies">
+
+                    <form class="search-input input-group col-md-6" ng-submit="movies.getMovies(movies.searchValue)">
+                        <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="movies.searchValue">
+                        <span class="input-group-btn">
+                      <button class="btn btn-danger" type="submit">
+                      <span class=" glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+
+                </form>
+
+
+
+              <ul>
+              <li ng-repeat="movie in movies.movies|limitTo:10">
+              {{ movie.Title }}
+            </li>
+          </ul>
+
+
+        </div>
+
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+            System.import('app/main.js');
+        </script>
+
+    </body>
+
+</html>
