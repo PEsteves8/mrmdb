@@ -1,4 +1,3 @@
-// @TODO add show all results button
 // @TODO use modals to display movie info
 
 export default class moviesController {
@@ -7,9 +6,11 @@ export default class moviesController {
         this.moviesService = moviesService;
         this.searchValue = "";
         this.message = "";
+        this.resultsNumber = 10;
     }
 
     getMovieList() {
+        this.resultsNumber = 10;
         this.movies = [];
         this.moviesService.searchMovies(this.searchValue).then(data => {
           console.log(data);
@@ -34,6 +35,14 @@ export default class moviesController {
         this.moviesService.searchMovieInfo(movieId).success(data => {
             console.log(data);
         });
+    }
+
+    showMoreResultsButton() {
+      return this.movies.length > 0 && this.movies.length >= this.resultsNumber
+    }
+
+    displayMoreResults() {
+      this.resultsNumber = this.resultsNumber + 10
     }
 }
 

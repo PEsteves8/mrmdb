@@ -16,36 +16,39 @@
 <body>
 
     <div class="container content" ng-app="app">
-      <div class="row top-header text-center"><h1>mrMDB</h1></div>
+        <div class="row top-header text-center">
+            <h1>mrMDB</h1></div>
 
         <div class="row" ng-controller="moviesController as movies">
-<div class="col-md-6 col-md-offset-3">
-            <form class="search-input input-group" ng-submit="movies.getMovieList(movies.searchValue)">
-                <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="movies.searchValue">
-                <span class="input-group-btn">
+            <div class="col-md-8 col-md-offset-2">
+                <form class="search-input input-group" ng-submit="movies.getMovieList(movies.searchValue)">
+                    <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="movies.searchValue">
+                    <span class="input-group-btn">
                       <button class="btn btn-danger" type="submit">
                       <span class=" glyphicon glyphicon-search"></span>
-                </button>
-                </span>
+                    </button>
+                    </span>
 
-            </form>
-              <div class="movie-message"><strong>{{ movies.message | uppercase }}</strong></div>
-            <ul class="movie-list col-md-10 col-md-offset-1">
+                </form>
+                <div class="movie-message"><strong>{{ movies.message | uppercase }}</strong></div>
+                <div ng-controller="listController as list">
+                    <ul class="movie-list col-md-10 col-md-offset-1" ng-init="list.setResultsLimit(10)">
+                        <li class="movie-list-item" ng-repeat="movie in movies.movies | limitTo: list.resultsLimit" ng-click="movies.getMovieInfo(movie.imdbID)">
+                            <div class="list-item-content"><strong ng-bind-html="movie.title"></strong> (<span ng-bind="movie.title_description | limitTo: 4"></span>)</div><div class="list-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+                        </li>
+                    </ul>
+                    <button class="btn btn-default btn-xs" ng-show="list.showMoreResultsButton(movies.movies.length)" ng-click="list.displayMoreResults(10)">Show More</button>
+                </div>
 
-                <li class="movie-list-item" ng-repeat="movie in movies.movies | limitTo: 10" ng-click="movies.getMovieInfo(movie.imdbID)">
-                  <strong ng-bind-html="movie.title"></strong> (<span ng-bind="movie.title_description | limitTo: 4"></span>)<span class="glyphicon glyphicon-chevron-right list-arrow"></span>
-                </li>
-            </ul>
-
-</div>
+            </div>
         </div>
+    </div>
 
-
-        <script src="jspm_packages/system.js"></script>
-        <script src="config.js"></script>
-        <script>
-            System.import('app/main.js');
-        </script>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+        System.import('app/main.js');
+    </script>
 
 
 </body>
