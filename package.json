@@ -2,6 +2,7 @@
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.5",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.5",
       "bootstrap": "github:twbs/bootstrap@^3.3.6"
     },
     "devDependencies": {

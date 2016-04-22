@@ -32,8 +32,8 @@
               <div class="movie-message"><strong>{{ movies.message | uppercase }}</strong></div>
             <ul class="movie-list col-md-10 col-md-offset-1">
 
-                <li class="movie-list-item" ng-repeat="movie in movies.movies.Search" ng-click="movies.getMovieInfo(movie.imdbID)">
-                    <strong>{{ movie.Title }}</strong><span> ({{ movie.Year }})</span><span class="glyphicon glyphicon-chevron-right list-arrow"></span>
+                <li class="movie-list-item" ng-repeat="movie in movies.movies | limitTo: 10" ng-click="movies.getMovieInfo(movie.imdbID)">
+                  <strong ng-bind-html="movie.title"></strong> (<span ng-bind="movie.title_description | limitTo: 4"></span>)<span class="glyphicon glyphicon-chevron-right list-arrow"></span>
                 </li>
             </ul>
 
@@ -46,6 +46,7 @@
         <script>
             System.import('app/main.js');
         </script>
+
 
 </body>
 

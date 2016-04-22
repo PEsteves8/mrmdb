@@ -2,4 +2,6 @@
 
 An aggregator for iMDB, RottenTomatoes and Metacritic reviews.
 
-Being developed to make my life easier and as a sandbox to learn ES6, Angular 1.x and Sass
+Being developed as a way to practice ES6, Angular 1.x and Sass.
+
+Also, it makes my life easier when choosing a movie to watch.

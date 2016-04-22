@@ -1,4 +1,4 @@
-// @TODO switch to imdb API using each version of search
+// @TODO add show all results button
 // @TODO use modals to display movie info
 
 export default class moviesController {
@@ -10,18 +10,22 @@ export default class moviesController {
     }
 
     getMovieList() {
+        this.movies = [];
         this.moviesService.searchMovies(this.searchValue).then(data => {
-            if (data.data.Response === 'True') {
-              this.message = 'Search results for: "' + this.searchValue + '"';
-                this.movies = data.data;
+          console.log(data);
+            if (Object.keys(data.data).length === 0) {
+                this.message = 'No results for: ' + this.searchValue + '"';
             } else {
-                this.movies = [];
-                this.message = data.data.Error;
-            }
-        }, () => {
-          this.movies = [];
-          this.message = "Error. Connection failed.";
 
+            this.message = 'Search results for: "' + this.searchValue + '"';
+            angular.forEach(data.data, item => {
+                angular.forEach(item, movie => {
+                    this.movies.push(movie);
+                });
+            });
+          }
+        }, data => {
+          this.message = "Unable to retrieve results - Connection problem";
         });
 
     }
