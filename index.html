@@ -12,33 +12,32 @@
 
 </head>
 
+
 <body>
 
-    <body>
+    <div class="container content" ng-app="app">
+      <div class="row top-header text-center"><h1>mrMDB</h1></div>
 
-        <div class="container" ng-app="app">
-
-            <div class="row" ng-controller="moviesController as movies">
-
-                    <form class="search-input input-group col-md-6" ng-submit="movies.getMovies(movies.searchValue)">
-                        <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="movies.searchValue">
-                        <span class="input-group-btn">
+        <div class="row" ng-controller="moviesController as movies">
+<div class="col-md-6 col-md-offset-3">
+            <form class="search-input input-group" ng-submit="movies.getMovieList(movies.searchValue)">
+                <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="movies.searchValue">
+                <span class="input-group-btn">
                       <button class="btn btn-danger" type="submit">
                       <span class=" glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
+                </button>
+                </span>
 
-                </form>
+            </form>
+              <div class="movie-message"><strong>{{ movies.message | uppercase }}</strong></div>
+            <ul class="movie-list col-md-10 col-md-offset-1">
 
+                <li class="movie-list-item" ng-repeat="movie in movies.movies.Search" ng-click="movies.getMovieInfo(movie.imdbID)">
+                    <strong>{{ movie.Title }}</strong><span> ({{ movie.Year }})</span><span class="glyphicon glyphicon-chevron-right list-arrow"></span>
+                </li>
+            </ul>
 
-
-              <ul>
-              <li ng-repeat="movie in movies.movies|limitTo:10">
-              {{ movie.Title }}
-            </li>
-          </ul>
-
-
+</div>
         </div>
 
 
@@ -48,6 +47,6 @@
             System.import('app/main.js');
         </script>
 
-    </body>
+</body>
 
 </html>
