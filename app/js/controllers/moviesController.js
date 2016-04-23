@@ -1,12 +1,11 @@
-// @TODO use modals to display movie info
-
 export default class moviesController {
-    constructor(moviesService) {
+    constructor(moviesService, $rootScope) {
         this.movies = [];
         this.moviesService = moviesService;
         this.searchValue = "";
         this.message = "";
         this.resultsNumber = 10;
+        this.$rootScope = $rootScope;
     }
 
     getMovieList() {
@@ -31,20 +30,12 @@ export default class moviesController {
 
     }
 
-    getMovieInfo(movieId) {
-        this.moviesService.searchMovieInfo(movieId).success(data => {
-            console.log(data);
+    getMovieInfo(movieTitle) {
+        this.moviesService.searchMovieInfo(movieTitle).success(data => {
+            this.$rootScope.$broadcast('openMovieInfo', data);
         });
-    }
-
-    showMoreResultsButton() {
-      return this.movies.length > 0 && this.movies.length >= this.resultsNumber
-    }
-
-    displayMoreResults() {
-      this.resultsNumber = this.resultsNumber + 10
     }
 }
 
 
-moviesController.$inject = ['moviesService'];
+moviesController.$inject = ['moviesService', '$rootScope'];
