@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+<div class="movie-message"><strong>{{ movies.message | uppercase }}</strong></div>
+        <div ng-controller="listController as list">
+            <ul class="movie-list col-md-10 col-md-offset-1" ng-init="list.setResultsLimit(10)">
+                <li class="movie-list-item" ng-repeat="movie in movies.movies | limitTo: list.resultsLimit">
+                  <a ui-sref="movieData({movieID: movie.id})">
+                    <div class="list-item-content"><strong ng-bind-html="movie.title"></strong> (<span ng-bind="movie.title_description | limitTo: 4"></span>)</div>
+                    <div class="list-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+                  </a>
+                </li>
+            </ul>
+        <button class="btn btn-default btn-xs" ng-show="list.showMoreResultsButton(movies.movies.length)" ng-click="list.displayMoreResults(10)">Show More</button>
+</div>
+    </div>
+</div>

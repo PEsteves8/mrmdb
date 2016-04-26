@@ -1,9 +1,12 @@
 export default class movieDataController {
-    constructor($scope) {
+    constructor($scope, $stateParams, moviesService) {
         this.data = {};
-        $scope.$on('openMovieInfo', (event, value) => {
-            this.data = value;
-            console.log(value);
+        this.$stateParams = $stateParams;
+        this.moviesService = moviesService;
+        this.moviesService.searchMovieInfo(this.$stateParams.movieID).success(data => {
+            this.data = data;
         });
     }
 }
+
+movieDataController.$inject = ['$scope', '$stateParams', 'moviesService'];

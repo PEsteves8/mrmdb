@@ -7,7 +7,6 @@ export default class moviesService {
     }
     searchMovieInfo(movieId) {
       return this.$http.get('http://www.omdbapi.com/?tomatoes=true&i=' + movieId);
-
     }
 }
 
