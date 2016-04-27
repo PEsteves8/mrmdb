@@ -6,7 +6,7 @@ export default class searchBarController {
   }
 
   doSearch() {
-    this.$state.transitionTo('searchResults', {movieName: this.searchValue});
+    this.$state.transitionTo('searchResults', {searchValue: this.searchValue});
   }
 
 }

@@ -8,23 +8,20 @@ export default class movieListController {
         this.$rootScope = $rootScope;
         this.$stateParams = $stateParams;
 
-        this.moviesService.searchMovies(this.$stateParams.movieName).then(data => {
-            var movieName = this.$stateParams.movieName;
+        this.moviesService.searchMovies(this.$stateParams.searchValue).then(data => {
+            let searchValue = this.$stateParams.searchValue;
 
             console.log(data);
-                if (Object.keys(data.data).length === 0) {
-                    this.message = 'No results for: ' + movieName + '"';
-                } else {
-                this.message = 'Search results for: "' + movieName + '"';
-                angular.forEach(data.data, item => {
-                    angular.forEach(item, movie => {
-                        this.movies.push(movie);
-                    });
-                });
-            }}, data => {
-              this.message = "Unable to retrieve results - Connection problem";
+            if (data.Response === "False") {
+                this.message = 'No results for: ' + searchValue + '"';
+            } else {
+                this.message = data.data.totalResults + ' results for: "' + searchValue + '"';
+                this.movies = data.data.Search;
+                console.log(this.movies);
             }
-          );
+        }, data => {
+            this.message = "Unable to retrieve results - Connection problem";
+        });
 
     }
 }

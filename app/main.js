@@ -1,7 +1,9 @@
-//import the bootstrap.js file
-//import bootstrap from 'bootstrap';
+//@TODO Add pagination
+//@TODO Change /title/ to /title-id/
+//@TODO Improve header styles
+//@TODO Improve data showcase styles
+
 import angular from 'angular';
-import ngSanitize from 'angular-sanitize';
 import 'angular-ui-router';
 
 // Controllers
@@ -14,7 +16,7 @@ import searchBarController from 'app/js/controllers/searchBarController.js';
 import moviesService from 'app/js/services/moviesService.js';
 
 
-var app = angular.module('app', ['ngSanitize', 'ui.router'])
+var app = angular.module('app', ['ui.router'])
     .service('moviesService', moviesService)
     .controller('movieListController', movieListController)
     .controller('searchBarController', searchBarController)
@@ -34,7 +36,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 controllerAs: 'movieData'
             })
             .state('searchResults', {
-              url: '/search-results/:movieName',
+              url: '/search-results/:searchValue',
               templateUrl: 'app/partials/movie-list.html',
               controller: 'movieListController',
               controllerAs: 'movies'

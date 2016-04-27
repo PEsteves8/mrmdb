@@ -1,10 +1,26 @@
 <div class="row">
-<div class="col-md-offset-3">
+<div class="col-md-8 col-md-offset-2">
     <h4>Title: {{ movieData.data.Title }}</h1>
           <p>Year: {{ movieData.data.Year}}</p>
           <p>Metascore: {{ movieData.data.Metascore}}</p>
+          <p>MetaCritic Reviews URL: <a target="_blank" href="http://www.imdb.com/title/{{ movieData.data.imdbID }}/criticreviews">Here</a></p>
           <p>iMDB Rating: {{ movieData.data.imdbRating}} with {{ movieData.data.imdbVotes}} votes</p>
-          <p>RottenTomatoes Score: {{ movieData.data.tomatoMeter}}%</p>
+          <p>IMDB URL: <a target="_blank" href="http://www.imdb.com/title/{{ movieData.data.imdbID }}">Here</a></p>
+          <p>RottenTomatoes Score: {{ movieData.data.tomatoMeter}}% with {{ movieData.data.tomatoReviews }} critic reviews</p>
           <p>RottenTomatoes Consensus: {{ movieData.data.tomatoConsensus}}</p>
+          <p>RottenTomatoes URL: <a target="_blank" href="{{ movieData.data.tomatoURL }}">Here</a></p>
+          <p>BoxofficeMojo URL: <a target="_blank" href="http://www.boxofficemojo.com/search/?q={{ movieData.data.Title }}">Here</a></p>
+          <p>Wikipedia Quick Search: <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Search/{{ movieData.data.Title }}">Here</a></p>
+          <p>Actors: {{movieData.data.Actors}}</p>
+          <p>Country: {{movieData.data.Country}}</p>
+          <p>Rated: {{ movieData.data.Rated }}</p>
+          <p>Directed By: {{movieData.data.Director}}</p>
+          <p>Written By: {{movieData.data.Writer}}</p>
+          <p>Genre: {{movieData.data.Genre}}</p>
+          <p>Language: {{movieData.data.Language}}</p>
+          <p>Plot: {{movieData.data.Plot}}</p>
+          <p>Production: {{movieData.data.Production}}</p>
+          <p>Runtime: {{movieData.data.Runtime}}</p>
+
 </div>
 </div>

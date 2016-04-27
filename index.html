@@ -6,6 +6,7 @@
 
     <title>mrMDB - Meta Rotten Movie Data Base - Get metacritic, rottentomatoes and imdb scores in one place</title>
 
+    <link ref="stylesheet" href="jspm_packages\github\necolas\normalize.css@4.1.1">
     <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="dist/styles.css">
@@ -17,11 +18,11 @@
 
     <div class="container content" ng-app="app">
         <div class="row top-header text-center">
-            <h1>mrMDB</h1></div>
+            <h1 class="title-logo col-md-2 col-md-offset-5">mrMDB</h1></div>
 
 
-<div ng-controller="searchBarController as searchBar">
-            <form class="search-input input-group" ng-submit="searchBar.doSearch(searchBar.searchValue)">
+<div class="search-form" ng-controller="searchBarController as searchBar">
+            <form class="col-md-8 col-md-offset-2 search-input input-group" ng-submit="searchBar.doSearch(searchBar.searchValue)">
                 <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="searchBar.searchValue">
                 <span class="input-group-btn">
                   <button class="btn btn-danger" type="submit">
@@ -36,7 +37,7 @@
 
 
 
-      
+
     </div>
 
 
