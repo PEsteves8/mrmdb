@@ -1,5 +1,4 @@
 //@TODO Add pagination
-//@TODO Change /title/ to /title-id/
 //@TODO Improve header styles
 //@TODO Improve data showcase styles
 
@@ -30,13 +29,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
         $stateProvider
             .state('movieData', {
-                url: '/title/:movieID',
+                url: '/title-id/:movieID',
                 templateUrl: 'app/partials/movie-data.html',
                 controller: 'movieDataController',
                 controllerAs: 'movieData'
             })
             .state('searchResults', {
-              url: '/search-results/:searchValue',
+              url: '/search-results/:searchValue/:page',
               templateUrl: 'app/partials/movie-list.html',
               controller: 'movieListController',
               controllerAs: 'movies'

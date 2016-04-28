@@ -1,11 +1,17 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <div class="movie-message"><strong>{{ movies.message | uppercase }}</strong></div>
-        <div class="col-md-10 col-md-offset-1 list-group" ng-init="list.setResultsLimit(10)">
+        <div class="col-md-11 text-right">
+            <button ng-show="movies.movies.length > 0" class="btn btn-link btn-xs" ng-click="movies.previousPage()"><span class="glyphicon glyphicon-chevron-left"></button>
+            <span ng-show="movies.totalPages">{{ movies.currentPage }} of {{ movies.totalPages }}</span>
+            <button ng-show="movies.movies.length > 0" class="btn btn-link btn-xs" ng-click="movies.nextPage()"><span class="glyphicon glyphicon-chevron-right"></button>
+        </div>
+        <div class="col-md-10 col-md-offset-1 list-group movies-list">
             <a class="list-group-item " ng-repeat="movie in movies.movies" ui-sref="movieData({movieID: movie.imdbID})">
-                    <div class="list-item-content text-primary"><strong>{{ movie.Title }}</strong> (<span>{{ movie.Year }}</span><span class="text-capitalize" ng-if="movie.Type !== 'movie'"> {{ movie.Type }}</span>)</div>
-                    <div class="list-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
+                <div class="list-item-content text-primary"><strong>{{ movie.Title }}</strong> (<span>{{ movie.Year }}</span><span class="text-capitalize" ng-if="movie.Type !== 'movie'"> {{ movie.Type }}</span>)</div>
+                <div class="list-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
             </a>
         </div>
+
     </div>
 </div>
