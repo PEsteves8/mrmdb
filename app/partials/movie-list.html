@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-10 col-md-offset-1 list-group movies-list">
             <a class="list-group-item " ng-repeat="movie in movies.movies" ui-sref="movieData({movieID: movie.imdbID})">
-                <div class="list-item-content text-primary"><strong>{{ movie.Title }}</strong> (<span>{{ movie.Year }}</span><span class="text-capitalize" ng-if="movie.Type !== 'movie'"> {{ movie.Type }}</span>)</div>
+                <div class="list-item-content text-info"><strong>{{ movie.Title }}</strong> (<span>{{ movie.Year }}</span><span class="text-capitalize" ng-if="movie.Type !== 'movie'"> {{ movie.Type }}</span>)</div>
                 <div class="list-arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
             </a>
         </div>

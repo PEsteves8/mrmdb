@@ -5,7 +5,8 @@ $logo-color: #d9a407;
     background-color: white;
     min-height: 100vh;
     box-shadow: 0 0 10px #888888;
-    padding: 0;
+    padding: 0 0 100px 0;
+
 }
 .title-logo {
     border: 2px solid $logo-color;
@@ -48,4 +49,16 @@ $logo-color: #d9a407;
 
 .movies-list {
   min-height: 400px;
+}
+
+.margin-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.plot-section {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
 }
