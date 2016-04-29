@@ -1,4 +1,4 @@
-export default function angularConfig($stateProvider, $urlRouterProvider) {
+export default function config($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/');
 
@@ -18,4 +18,4 @@ export default function angularConfig($stateProvider, $urlRouterProvider) {
 
 }
 
-angularConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+config.$inject = ['$stateProvider', '$urlRouterProvider'];

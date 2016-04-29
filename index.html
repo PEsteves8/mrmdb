@@ -6,10 +6,7 @@
 
     <title>mrMDB - Meta Rotten Movie Data Base - Get metacritic, rottentomatoes and imdb scores in one place</title>
 
-    <link ref="stylesheet" href="jspm_packages\github\necolas\normalize.css@4.1.1">
-    <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="stylesheet" href="dist/bundle.css">
 
 </head>
 
@@ -32,20 +29,12 @@
          </form>
 </div>
 
-
 <div ui-view></div>
-
-
-
 
     </div>
 
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
-    <script>
-        System.import('app/main.js');
-    </script>
+    <script src='dist/bundle.js'></script>
 
 
 </body>
