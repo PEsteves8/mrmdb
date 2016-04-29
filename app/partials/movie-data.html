@@ -1,28 +1,44 @@
 <div class="row margin-bottom-20">
 
-    <div class="col-md-12 text-center margin-bottom-20"><span class="h2">{{ movieData.data.Title }}</span><span class="h5"> ({{ movieData.data.Year}})</span></div>
-    <div class="col-md-10 col-md-offset-1">
-      <h3 class="margin-bottom-20">Reviews</h3>
+    <div class="col-md-12 text-center margin-bottom-20"><span class="h1">{{ movieData.data.Title }}</span><span class="h5"> ({{ movieData.data.Year}})</span></div>
 
-        <div class="col-md-4">
-            <p>iMDB Rating: {{ movieData.data.imdbRating}} with {{ movieData.data.imdbVotes}} votes</p>
-            <p>IMDB URL: <a target="_blank" href="http://www.imdb.com/title/{{ movieData.data.imdbID }}">Here</a></p>
-            <p>Metascore: {{ movieData.data.Metascore}}</p>
-            <p>MetaCritic Reviews URL: <a target="_blank" href="http://www.imdb.com/title/{{ movieData.data.imdbID }}/criticreviews">Here</a></p>
+    <div class="margin-top-20 col-md-10 col-md-offset-1 well">
+        <div class="col-md-6 text-center">
+
+            <div class="tomato-score col-md-4">
+                <a target="_blank" href="http://www.rottentomatoes.com"><img class="rotten-tomatoes-logo" src="dist/assets/rotten-tomatoes-logo.png" width="80"></a>
+
+                <a target="_blank" href="{{ movieData.data.tomatoURL }}"><span class="large-font-3">{{ movieData.data.tomatoMeter}}% </span> <br> ({{ movieData.data.tomatoReviews }} critic reviews)</a></div>
+
+
+
+            <div class="text-left rotten-consensus col-md-7"><strong>Critics Consensus: </strong>{{ movieData.data.tomatoConsensus}}</div>
 
         </div>
 
-        <div class="col-md-4">
-            <p>RottenTomatoes Score: {{ movieData.data.tomatoMeter}}% with {{ movieData.data.tomatoReviews }} critic reviews</p>
-            <p>RottenTomatoes Consensus: {{ movieData.data.tomatoConsensus}}</p>
-            <p>RottenTomatoes URL: <a target="_blank" href="{{ movieData.data.tomatoURL }}">Here</a></p>
+        <div class="col-md-4 border-right-left">
+            <div class="text-center">
+                <a target="_blank" href="http//www.imdb.com"><img class="imdb-logo" src="dist/assets/imdb-logo.png" width="60"></a>
+                <br>
+
+                <div class="imdb-rating"><a target="_blank" href="http://www.imdb.com/title/{{ movieData.data.imdbID }}"><span class="large-font-3 score">{{ movieData.data.imdbRating}}</span>/10 <br><small>({{ movieData.data.imdbVotes}} votes)</small></a></div>
+
+                <p class="large-font-1-5">Metascore: <a target="_blank" href="http://www.imdb.com/title/{{ movieData.data.imdbID }}/criticreviews">{{ movieData.data.Metascore}}</a></p>
+            </div>
+
         </div>
 
-        <div class="col-md-4">
-          <p>BoxofficeMojo URL: <a target="_blank" href="http://www.boxofficemojo.com/search/?q={{ movieData.data.Title }}">Here</a></p>
 
-            <p>Wikipedia Quick Search: <a target="_blank" href="https://en.wikipedia.org/wiki/Special:Search/{{ movieData.data.Title }}">Here</a></p>
+
+        <div class="col-md-2 text-center">
+            <a target="_blank" href="http://www.boxofficemojo.com"><img src="dist/assets/boxofficemojo-logo.png" width="40"></a>
+            <br><a target="_blank" href="http://www.boxofficemojo.com/search/?q={{ movieData.data.Title }}">Quick Link</a>
+            <br>
+            <br>
+            <a target="_blank" href="https://www.wikipedia.com"><img src="dist/assets/wiki-logo.png" width="40"></a>
+            <br><a target="_blank" href="https://en.wikipedia.org/wiki/Special:Search/{{ movieData.data.Title }}">Quick Link</a>
         </div>
+
 
     </div>
 </div>
@@ -40,7 +56,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-md-offset-1">
-                <div class="margin-bottom-10"><span class="h4">Country:</span> {{movieData.data.Country}}</div>
+                <div class="margin-bottom-10"><strong>Country:</span> {{movieData.data.Country}}</div>
                 <div class="margin-bottom-10"><span class="h4">Rated:</span> {{ movieData.data.Rated }}</div>
                 <div class="margin-bottom-10"><span class="h4">Genre:</span> {{movieData.data.Genre}}</div>
                 <div class="margin-bottom-10"><span class="h4">Language:</span> {{movieData.data.Language}}</div>

@@ -1,5 +1,9 @@
 $logo-color: #d9a407;
 
+a:hover {
+  text-decoration: none;
+  color: #123b88;
+}
 
 .content {
     background-color: white;
@@ -9,9 +13,9 @@ $logo-color: #d9a407;
 
 }
 .title-logo {
-    border: 2px solid $logo-color;
+  /*  border: 1px solid $logo-color;
     border-radius: 3px;
-    box-shadow: 0 0 5px $logo-color;
+    box-shadow: 0 0 5px $logo-color;*/
 }
 .top-header {
     background: linear-gradient(#2f2f2f, #403e3e);
@@ -51,6 +55,10 @@ $logo-color: #d9a407;
   min-height: 400px;
 }
 
+.margin-top-20 {
+  margin-top: 20px;  
+}
+
 .margin-bottom-20 {
   padding-bottom: 20px;
 }
@@ -61,4 +69,32 @@ $logo-color: #d9a407;
 
 .margin-bottom-10 {
   margin-bottom: 10px;
+}
+
+.large-font-3 {
+  font-size: 3em;
+}
+
+.large-font-1-5 {
+  font-size: 1.5em;
+}
+
+.imdb-logo {
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+.imdb-rating-label {
+ font-size: 1.1em;
+}
+
+
+.rotten-tomatoes-logo {
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.border-right-left {
+  border-right: 1px solid #888888;
+  border-left: 1px solid #888888;
+
 }

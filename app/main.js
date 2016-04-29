@@ -1,6 +1,6 @@
-//@TODO Add pagination
-//@TODO Improve header styles
-//@TODO Improve data showcase styles
+//@TODO Check out angular animate
+//@TODO Check out angular spinwheel
+//@TODO Improve header
 
 import angular from 'angular';
 import 'angular-ui-router';
