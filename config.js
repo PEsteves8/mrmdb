@@ -12,6 +12,26 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "dist/bundle.js": [
+      "app/main.js",
+      "app/angularConfig.js",
+      "app/js/services/moviesService.js",
+      "npm:babel-runtime@5.8.38/helpers/class-call-check.js",
+      "npm:babel-runtime@5.8.38/helpers/create-class.js",
+      "npm:babel-runtime@5.8.38/core-js/object/define-property.js",
+      "npm:core-js@1.2.6/library/fn/object/define-property.js",
+      "npm:core-js@1.2.6/library/modules/$.js",
+      "app/js/controllers/searchBarController.js",
+      "app/js/controllers/listController.js",
+      "app/js/controllers/movieDataController.js",
+      "app/js/controllers/movieListController.js",
+      "github:angular-ui/ui-router@0.2.18.js",
+      "github:angular-ui/ui-router@0.2.18/angular-ui-router.js",
+      "github:angular/bower-angular@1.5.5.js",
+      "github:angular/bower-angular@1.5.5/angular.js"
+    ]
+  },
 
   map: {
     "angular": "github:angular/bower-angular@1.5.5",
