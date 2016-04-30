@@ -48,39 +48,37 @@
 	
 	__webpack_require__(1);
 	
-	__webpack_require__(5);
+	__webpack_require__(10);
 	
 	__webpack_require__(12);
 	
-	__webpack_require__(14);
-	
-	var _angular = __webpack_require__(16);
+	var _angular = __webpack_require__(14);
 	
 	var _angular2 = _interopRequireDefault(_angular);
 	
-	__webpack_require__(18);
+	__webpack_require__(16);
 	
-	var _movieListController = __webpack_require__(19);
+	var _movieListController = __webpack_require__(17);
 	
 	var _movieListController2 = _interopRequireDefault(_movieListController);
 	
-	var _movieDataController = __webpack_require__(20);
+	var _movieDataController = __webpack_require__(18);
 	
 	var _movieDataController2 = _interopRequireDefault(_movieDataController);
 	
-	var _listController = __webpack_require__(21);
+	var _listController = __webpack_require__(19);
 	
 	var _listController2 = _interopRequireDefault(_listController);
 	
-	var _searchBarController = __webpack_require__(22);
+	var _searchBarController = __webpack_require__(20);
 	
 	var _searchBarController2 = _interopRequireDefault(_searchBarController);
 	
-	var _moviesService = __webpack_require__(23);
+	var _moviesService = __webpack_require__(21);
 	
 	var _moviesService2 = _interopRequireDefault(_moviesService);
 	
-	var _config = __webpack_require__(24);
+	var _config = __webpack_require__(22);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -90,15 +88,15 @@
 	
 	
 	// Controllers
-	//@TODO Check out directive thing for search bar
-	//@TODO Check out angular animate
-	//@TODO Check out angular spinwheel
-	//@TODO Improve header
-	//@TODO Deal with logo legal
+	
 	
 	var app = _angular2.default.module('app', ['ui.router']).service('moviesService', _moviesService2.default).controller('movieListController', _movieListController2.default).controller('searchBarController', _searchBarController2.default).controller('listController', _listController2.default).controller('movieDataController', _movieDataController2.default).config(_config2.default);
 	
 	// Config
+	//@TODO Check out angular animate
+	//@TODO Check out angular spinwheel
+
+	//import 'normalize.css/normalize.css';
 
 /***/ },
 /* 1 */
@@ -110,17 +108,17 @@
 /* 2 */,
 /* 3 */,
 /* 4 */,
-/* 5 */
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
 /* 11 */,
 /* 12 */
 /***/ function(module, exports) {
@@ -130,21 +128,14 @@
 /***/ },
 /* 13 */,
 /* 14 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 15 */,
-/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(17);
+	__webpack_require__(15);
 	module.exports = angular;
 
 
 /***/ },
-/* 17 */
+/* 15 */
 /***/ function(module, exports) {
 
 	/**
@@ -31017,7 +31008,7 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ },
-/* 18 */
+/* 16 */
 /***/ function(module, exports) {
 
 	/**
@@ -35561,7 +35552,7 @@
 	})(window, window.angular);
 
 /***/ },
-/* 19 */
+/* 17 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -35631,7 +35622,7 @@
 	movieListController.$inject = ['moviesService', '$rootScope', '$scope', '$stateParams', '$state'];
 
 /***/ },
-/* 20 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35661,7 +35652,7 @@
 	movieDataController.$inject = ['$scope', '$stateParams', 'moviesService'];
 
 /***/ },
-/* 21 */
+/* 19 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -35705,7 +35696,7 @@
 	exports.default = listController;
 
 /***/ },
-/* 22 */
+/* 20 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35743,7 +35734,7 @@
 	searchBarController.$inject = ['$rootScope', '$state'];
 
 /***/ },
-/* 23 */
+/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35784,7 +35775,7 @@
 	moviesService.$inject = ['$http'];
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';

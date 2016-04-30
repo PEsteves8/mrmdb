@@ -7,6 +7,7 @@
     <title>mrMDB - Meta Rotten Movie Data Base - Get metacritic, rottentomatoes and imdb scores in one place</title>
 
     <link rel="stylesheet" href="dist/bundle.css">
+    <link rel="shortcut icon" href="dist/assets/favicon.ico" />
 
 </head>
 
@@ -15,21 +16,21 @@
 
     <div class="container content" ng-app="app">
         <div class="row top-header text-center">
-            <h1 class="title-logo col-md-2 col-md-offset-5">mrMDB</h1></div>
+            <h1 class="title-logo center-block"><strong>mrMDB</strong></h1><p>Quick Movie Info From IMDb, Metacritic, Rotten Tomatoes and more</p></div>
 
 
-<div class="search-form" ng-controller="searchBarController as searchBar">
-            <form class="col-md-8 col-md-offset-2 search-input input-group" ng-submit="searchBar.doSearch(searchBar.searchValue)">
+        <div class="search-form" ng-controller="searchBarController as searchBar">
+            <form class="col-xs-8 col-xs-offset-2 search-input input-group" ng-submit="searchBar.doSearch(searchBar.searchValue)">
                 <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="searchBar.searchValue">
                 <span class="input-group-btn">
                   <button class="btn btn-danger" type="submit">
                   <span class=" glyphicon glyphicon-search"></span>
                 </button>
                 </span>
-         </form>
-</div>
+            </form>
+        </div>
 
-<div ui-view></div>
+        <div ui-view></div>
 
     </div>
 

@@ -1,4 +1,10 @@
-$logo-color: #d9a407;
+$logo-color1: #ed6519;
+$logo-color2: #f68b4f;
+
+html, body {
+  font-family: arial;
+}
+
 
 a:hover {
   text-decoration: none;
@@ -12,11 +18,16 @@ a:hover {
     padding: 0;
 }
 
-/* .title-logo {
-    border: 1px solid $logo-color;
+.title-logo {
+    width: 160px;
+    padding: 5px;
     border-radius: 3px;
-    box-shadow: 0 0 5px $logo-color;
-}*/
+    box-shadow: 0 0 5px $logo-color1;
+    background: linear-gradient(to right, $logo-color1, $logo-color2, $logo-color1);
+
+}
+
+
 
 .top-header {
     background: linear-gradient(#2f2f2f, #403e3e);
@@ -94,8 +105,34 @@ a:hover {
   margin-right: 10px;
 }
 
-.border-right-left {
+.imdb-section {
   border-right: 1px solid #888888;
-  border-left: 1px solid #888888;
+}
 
+.rotten-section {
+  margin-bottom: 50px;
+}
+
+.movie-type-details {
+  margin-top: 50px;
+  background: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .imdb-section {
+    border-right: 1px solid #888888;
+    border-left: 1px solid #888888;
+  }
+
+  .rotten-section {
+    margin-bottom: 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .movie-type-details {
+    margin-top: 0;
+
+  }
 }

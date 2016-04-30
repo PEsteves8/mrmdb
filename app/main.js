@@ -1,11 +1,7 @@
-//@TODO Check out directive thing for search bar
 //@TODO Check out angular animate
 //@TODO Check out angular spinwheel
-//@TODO Improve header
-//@TODO Deal with logo legal
 
-
-import 'normalize.css/normalize.css';
+//import 'normalize.css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './css/styles.scss';
