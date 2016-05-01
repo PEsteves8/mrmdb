@@ -16,31 +16,36 @@
 
     <div class="container content" ng-app="app">
         <div class="row top-header text-center">
-            <h1 class="title-logo center-block" ui-sref="home"><strong>mrMDB</strong></h1></a><p>Quick Movie Info From IMDb, Metacritic, Rotten Tomatoes and more</p></div>
-            <div class="load-icon"></div>
+            <h1 class="title-logo center-block" ui-sref="home"><strong>mrMDB</strong></h1></a>
+            <p>Quick Movie Info From IMDb, Metacritic, Rotten Tomatoes and more</p>
+        </div>
+        <div class="load-icon"></div>
 
 
-        <div class="search-form " ng-controller="searchBarController as searchBar">
-            <form class="col-xs-8 col-xs-offset-2 search-input input-group" ng-submit="searchBar.doSearch(searchBar.searchValue)">
-                <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="searchBar.searchValue">
+        <div class="search-form " ng-controller="mainController as main">
+            <form class="col-xs-8 col-xs-offset-2 search-input input-group" ng-submit="main.doSearch(searchBar.searchValue)">
+                <input type="text" class="search-query form-control" placeholder="Search movie titles..." ng-model="main.searchValue">
                 <span class="input-group-btn">
                   <button class="btn btn-danger" type="submit">
                   <span class=" glyphicon glyphicon-search"></span>
                 </button>
                 </span>
             </form>
+            <br>
+            <br>
+            <div class="movie-message col-xs-offset-2"><strong ng-bind="main.message | uppercase"></strong></div>
+
+
+
+
+            <div ui-view class="main-view"></div>
+
+
         </div>
-
-          
-
-        <div ui-view class="main-view"></div>
-
-
-
 
 
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
 
     <script src='dist/bundle.js'></script>
 

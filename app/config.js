@@ -4,7 +4,8 @@ export default function config($stateProvider, $urlRouterProvider, cfpLoadingBar
 
         $stateProvider
             .state('home', {
-              url: '/'
+              url: '/',
+                  
             })
             .state('movieData', {
                 url: '/title-id/:movieID',

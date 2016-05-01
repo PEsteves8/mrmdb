@@ -1,5 +1,3 @@
-//@TODO consider nesting view to avoid rerendering of the message
-
 // import 'normalize.css/normalize.css';
 import bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -19,7 +17,7 @@ import 'angular-loading-bar';
 import movieListController from './js/controllers/movieListController.js';
 import movieDataController from './js/controllers/movieDataController.js';
 
-import searchBarController from './js/controllers/searchBarController.js';
+import mainController from './js/controllers/mainController.js';
 
 // Services
 import moviesService from './js/services/moviesService.js';
@@ -32,6 +30,6 @@ import config from './config.js';
 var app = angular.module('app', ['ui.router', 'angular-loading-bar', 'ngAnimate'])
     .service('moviesService', moviesService)
     .controller('movieListController', movieListController)
-    .controller('searchBarController', searchBarController)
+    .controller('mainController', mainController)
     .controller('movieDataController', movieDataController)
     .config(config);
