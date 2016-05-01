@@ -1,9 +1,8 @@
 export default class movieListController {
-    constructor(moviesService, $rootScope, $scope, $stateParams, $state) {
+    constructor(moviesService,$scope, $stateParams, $state) {
         this.movies = [];
         this.moviesService = moviesService;
         this.message = "";
-        this.$rootScope = $rootScope;
         this.currentPage = Number($stateParams.page);
         this.searchValue = $stateParams.searchValue;
         this.$state = $state;
@@ -41,4 +40,4 @@ export default class movieListController {
 }
 
 
-movieListController.$inject = ['moviesService', '$rootScope', '$scope', '$stateParams', '$state'];
+movieListController.$inject = ['moviesService', '$scope', '$stateParams', '$state'];

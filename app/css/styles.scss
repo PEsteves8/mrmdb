@@ -24,6 +24,11 @@ a:hover {
     border-radius: 3px;
     box-shadow: 0 0 5px $logo-color1;
     background: linear-gradient(to right, $logo-color1, $logo-color2, $logo-color1);
+}
+
+.title-logo:hover {
+  cursor: pointer;
+  opacity: 0.95;
 
 }
 
@@ -33,7 +38,7 @@ a:hover {
     background: linear-gradient(#2f2f2f, #403e3e);
     width: 100%;
     height: 120px;
-    margin: 0 auto 20px;
+    margin: 0 auto 0;
     color: white;
 }
 .search-form {
@@ -135,4 +140,42 @@ a:hover {
     margin-top: 0;
 
   }
+}
+
+#loading-bar .bar {
+  position: relative;
+  background-color: $logo-color1;
+  height: 3px;
+}
+
+.load-icon {
+  height: 3px;
+}
+
+
+
+#loading-bar-spinner {
+  position: relative;
+  left: 95%;
+}
+
+#loading-bar-spinner .spinner-icon {
+  border-top-color:  $logo-color1;
+  border-left-color: $logo-color1;
+  }
+
+
+.fade-effect.ng-hide-add {
+    transition: 0.1s linear opacity;
+    opacity: 1;
+}
+.fade-effect.ng-hide-add-active {
+    opacity: 0;
+}
+.fade-effect.ng-hide-remove {
+    transition: 0.1s linear opacity;
+    opacity: 0;
+}
+.fade-effect.ng-hide-remove-active {
+    opacity: 1;
 }

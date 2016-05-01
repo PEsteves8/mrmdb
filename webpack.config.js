@@ -28,7 +28,7 @@ module.exports = {
                 loader: ExtractTextPlugin.extract('style', 'css!postcss')
             }, {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style', 'css!sass!postcss')
+                loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
             }, {
                 test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/,
                 loader: "url?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"

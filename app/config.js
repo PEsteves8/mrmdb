@@ -1,8 +1,11 @@
-export default function config($stateProvider, $urlRouterProvider) {
+export default function config($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
 
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
+            .state('home', {
+              url: '/'
+            })
             .state('movieData', {
                 url: '/title-id/:movieID',
                 templateUrl: 'app/partials/movie-data.html',
@@ -16,6 +19,10 @@ export default function config($stateProvider, $urlRouterProvider) {
               controllerAs: 'movies'
             });
 
+
+cfpLoadingBarProvider.parentSelector = '.load-icon';
+
+
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider'];
+config.$inject = ['$stateProvider', '$urlRouterProvider', 'cfpLoadingBarProvider'];
