@@ -1,0 +1,58 @@
+@import 'variables';
+@import 'movie-list';
+@import 'movie-data';
+@import 'helpers';
+@import 'loading_bar_customize';
+@import 'ng-animate-styles';
+
+body,
+html {
+    font-family: arial;
+}
+a {
+    &:link {
+        text-decoration: none;
+    }
+    &:hover {
+        color: #123b88;
+    }
+    &:active {
+        color: #88abed;
+    }
+}
+.content {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 10px #888;
+    padding: 0;
+}
+.top-header {
+    background: linear-gradient($header-color-1, $header-color-2);
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    color: #fff;
+    .title-logo {
+        width: 160px;
+        padding: 5px;
+        border-radius: 3px;
+        box-shadow: 0 0 5px $logo-color-1;
+        background: linear-gradient(to right, $logo-color-1, $logo-color-2, $logo-color-1);
+        &:hover {
+            cursor: pointer;
+            opacity: 0.95;
+        }
+    }
+}
+.search-form {
+    margin: 40px 0 0;
+
+    form {
+      width: 65%;
+      margin: 0 auto;
+    }
+}
+.movie-message {
+    margin-bottom: 20px;
+    margin-left: 15%;
+}

@@ -3,7 +3,7 @@ import bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'angular-loading-bar/build/loading-bar.css';
-import './css/styles.scss';
+import './css/base.scss';
 
 // import angualr and ui-router
 import angular from 'angular';

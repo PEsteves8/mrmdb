@@ -1,0 +1,16 @@
+#loading-bar .bar {
+    position: relative;
+    background-color: $logo-color-1;
+    height: 3px;
+}
+.load-icon {
+    height: 3px;
+}
+#loading-bar-spinner {
+    position: relative;
+    left: 95%;
+}
+#loading-bar-spinner .spinner-icon {
+    border-top-color: $logo-color-1;
+    border-left-color: $logo-color-1;
+}

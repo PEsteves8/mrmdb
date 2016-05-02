@@ -1,0 +1,56 @@
+.movie-data-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.movie-info-title {
+    padding-left: 8%;
+}
+
+.movie-main-title {
+  margin-bottom: 50px;
+}
+
+.rotten-tomatoes-logo {
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.imdb-section {
+    border-right: 1px solid #888888;
+    .imdb-rating-label {
+        font-size: 1.1em;
+    }
+    .imdb-logo {
+        margin-right: 10px;
+        margin-bottom: 7px;
+    }
+}
+.rotten-section {
+    margin-bottom: 50px;
+}
+
+.movie-details {
+  width: 95%;
+  margin: 0 auto;
+}
+.movie-type-details {
+      margin-top: 50px;
+      background: #ffffff;
+  }
+
+
+
+@media screen and (min-width: 768px) {
+    .imdb-section {
+        border-right: 1px solid #888888;
+        border-left: 1px solid #888888;
+    }
+    .rotten-section {
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: 992px) {
+    .movie-type-details {
+        margin-top: 0;
+    }
+}

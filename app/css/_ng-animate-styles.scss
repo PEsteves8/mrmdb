@@ -1,0 +1,14 @@
+.fade-effect.ng-hide-add {
+    transition: 0.1s linear opacity;
+    opacity: 1;
+}
+.fade-effect.ng-hide-add-active {
+    opacity: 0;
+}
+.fade-effect.ng-hide-remove {
+    transition: 0.1s linear opacity;
+    opacity: 0;
+}
+.fade-effect.ng-hide-remove-active {
+    opacity: 1;
+}

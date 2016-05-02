@@ -1,7 +1,9 @@
 # mrMDB
 
-An aggregator for iMDB, RottenTomatoes and Metacritic reviews.
+An aggregator for iMDB, RottenTomatoes and Metacritic reviews and other useful info.
 
-Being developed as a way to practice ES6, Angular 1.x and Sass and webpack+esmodules as a replacement for bower/jspm + gulp
+Makes life a little easier when choosing a movie to watch.
 
-Also, it makes my life easier when choosing a movie to watch.
+I started it as a way to learn and practice Angular 1.x, Ecmascript6 (2015/Harmony) and SASS.
+I started using JSPM + Gulp, but switched midway to Webpack.
+I also played around a little better with some important helper tools like jshint or postcss autoprefixer and features like routing.

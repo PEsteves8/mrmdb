@@ -1,19 +1,23 @@
-<div ng-show="movieData.data.Title" class="fade-effect">
-    <div class="row margin-bottom-20">
+<div ng-show="movieData.data.Title" class="fade-effect movie-data-section margin-bottom-10">
 
-        <div class="col-xs-10 col-xs-offset-1 text-center margin-bottom-20"><span class="h1">{{ movieData.data.Title }}</span><span class="h5"> ({{ movieData.data.Year}})</span></div>
 
-        <div class="margin-top-20 col-xs-10 col-xs-offset-1 well">
+        <div class="row text-center movie-main-title">
+          <span class="h1">{{ movieData.data.Title }}</span>
+          <span class="h5"> ({{ movieData.data.Year}})</span>
+        </div>
+
+        <div class="row margin-top-20 well">
             <div class="col-sm-6 text-center rotten-section">
 
-                <div class="tomato-score col-md-4">
+                <div class="col-md-4 col-xs-12">
                     <a target="_blank" href="http://www.rottentomatoes.com"><img class="rotten-tomatoes-logo" src="dist/assets/rotten-tomatoes-logo.png" width="80"></a>
 
-                    <a target="_blank" href="{{ movieData.data.tomatoURL }}"><span class="large-font-3">{{ movieData.data.tomatoMeter}}%</span> <br> ({{ movieData.data.tomatoReviews }} critic reviews)</a></div>
+                    <a target="_blank" href="{{ movieData.data.tomatoURL }}"><span class="large-font-3">{{ movieData.data.tomatoMeter}}%</span> <br> ({{ movieData.data.tomatoReviews }} critic reviews)</a>
+                  </div>
 
 
 
-                <div class="text-left rotten-consensus col-md-7"><strong>Critics Consensus: </strong>{{ movieData.data.tomatoConsensus}}</div>
+                <div class="text-left col-md-8"><strong>Critics Consensus: </strong>{{ movieData.data.tomatoConsensus}}</div>
 
             </div>
 
@@ -42,14 +46,16 @@
 
 
         </div>
-    </div>
+
 
     <div class="row">
-        <h3 class="col-xs-10 col-xs-offset-1">Movie Info</h3>
-        <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-                <div class="col-md-7 movie-details">
-                    <div class="plot-section">
+
+        <h3 class="movie-info-title">Movie Info</h3>
+                </div>
+
+            <div class="row movie-details">
+                <div class="col-md-7">
+                    <div class="margin-bottom-20">
                         <h4>Plot:</h4> {{movieData.data.Plot}}</div>
                     <div class="margin-bottom-10"><span class="h4">Directed By:</span> {{movieData.data.Director}}</div>
                     <div class="margin-bottom-10"><span class="h4">Written By:</span> {{movieData.data.Writer}}</div>
@@ -57,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-10 col-sm-8 col-md-4 col-md-offset-1 movie-type-details well well-lg">
+                <div class="col-md-4 col-md-offset-1 movie-type-details well well-lg">
                     <div class="margin-bottom-10"><span class="h4">Country:</span> {{movieData.data.Country}}</div>
                     <div class="margin-bottom-10"><span class="h4">Rated:</span> {{ movieData.data.Rated }}</div>
                     <div class="margin-bottom-10"><span class="h4">Genre:</span> {{movieData.data.Genre}}</div>
@@ -67,8 +73,9 @@
                 </div>
             </div>
 
-        </div>
-        </div>
+
+
+        <div class="row">
         <br>
         <br>
         <br>
@@ -77,5 +84,6 @@
         <br>
         <hr>
         <footer class="text-center"><small>IMDb, IMDb.COM, and the IMDb logo are trademarks of IMDb.com, Inc. or its affiliates.</small></footer>
+      </div>
 
 </div>
